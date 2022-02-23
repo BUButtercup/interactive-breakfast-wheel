@@ -1,0 +1,15 @@
+<main>
+    <div class="list-box">
+        <ul id="recipe-list">
+            {{#if recipes}}
+                {{#each recipes}}
+                    <li class="recipe-li" data-index-number="{{id}}">
+                        {{title}}
+                    </li>
+                {{/each}}
+            {{else}}
+                <li class="recipe-li">You have no saved recipes!</li>
+            {{/if}}
+        </ul>
+    </div>
+</main>

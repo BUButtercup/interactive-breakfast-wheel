@@ -3,9 +3,9 @@ const { Recipe, Comment, User } = require('../models/');
 
 router.get('/', async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll({
-      include: [User],
-    });
+    // const recipeData = await Recipe.findAll({
+    //   include: [User],
+    // });
 
     // const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
     res.render('landing');
@@ -13,6 +13,8 @@ router.get('/', async (req, res) => {
   res.status(500).json(err);
   }
 });
+
+
 
 // get all posts for homepage
 router.get('/recipe', async (req, res) => {
@@ -31,6 +33,8 @@ router.get('/recipe', async (req, res) => {
   //   res.status(500).json(err);
   // }
 // });
+
+
 
 // get single post
 router.get('/recipe/:id', async (req, res) => {
@@ -56,6 +60,8 @@ router.get('/recipe/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
 
 
 //to get to the login page
