@@ -11,15 +11,15 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header {
+.main-head {
     width: 100vw;
     height: 10vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
     text-align: center;
-    font-size: 2.5rem;
-    background-color: aquamarine;
+    /* font-size: 2.5rem; */
+    background-color: darkturquoise;
     color: whitesmoke;
     text-shadow: 2px 2px gray;
 }
@@ -29,9 +29,31 @@ main {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    /* justify-content: center; */
     align-items: center;
-    /* border: 1px solid black; */
+
+    border: 1px solid black;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 70%;
+    margin-top: 10vh;
+    padding: 20px;
+    border: 5px double gray;
+}
+
+form h2 {
+    align-self: center;
+}
+
+.form-labels {
+    font-size: 1.25rem;
+    text-align: right;
+
 }
 
 .main-el {
@@ -41,15 +63,52 @@ main {
     align-items: center;
 }
 
-button.main-el {
+.form-button {
     padding: 5px 10px;
+    width: 20%;
     background-color: aqua;
     /* color: whitesmoke; */
     font-weight: bold;
     border: none;
     border-radius: 5px;
     box-shadow: 2px 2px gray;
+    align-self: center;
 }
+
+.drop-nav {
+    width: 30%;
+    text-shadow: none;
+    background-color: darkturquoise;
+    border: 1px solid black;
+
+
+}
+
+
+
+#sunrise {
+    position:absolute;
+    height: 10vh;
+    width:auto;
+    background-image: url(./images/stylized_sunrise.png);
+    background-position: no-repeat;
+    background-size: cover;
+    z-index: 3;
+}
+
+#home-btn {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    z-index:5;
+
+  
+
+}
+/* #home-btn h1 {
+  
+} */
 
 #results {
 
@@ -67,4 +126,16 @@ button.main-el {
     font-weight: bold;
     color: gray;
     text-shadow: 2px 2px 3px black;
+}
+
+#check-pw {
+    visibility: hidden;
+    color: crimson;
+}
+
+#togglePassword {
+    text-align:right; 
+    color:#6c757d; 
+    text-decoration: underline; 
+    cursor: pointer;
 }

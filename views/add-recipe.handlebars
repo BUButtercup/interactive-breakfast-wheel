@@ -1,0 +1,152 @@
+<main>
+ 
+    <form class="container col-6 p-4" id="create-recipe">
+        <h2>Add your recipe!</h2>
+        <p>Make sure to credit the original author, if it's not you! And keep it clean, people, this is supposed to be fun!</p>
+        <div  class="row align-items-start">
+            <div class="col">
+                <label for="recipe-title" class="form-label">Recipe Title</label>
+                <input type="text" class="form-control" id="recipe-title" placeholder="Enter title here...">
+            {{!-- </div>
+            <div class="col"> --}}
+                <label for="recipe-author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="recipe-author" placeholder="Enter author here...">
+                <label for="recipe-title" class="form-label">How many servings?</label>
+                <input type="text" class="form-control" id="recipe-title" placeholder="Enter amount of servings here...">
+            {{!-- </div>
+            <div class="col row align-items-start"> --}}
+                <h5>Allergens:</h5>
+                <p>Does your recipe contain any of the following?:</p>
+                <div class="col d-flex">
+                   
+                    <div id="which-one">
+                         <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-meat">
+                            <label class="form-check-label" for="has-meat">
+                                Meat
+                            </label>
+                        </div>
+                        <p >Which one?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-beef">
+                            <label class="form-check-label" for="has-beef">
+                                Beef
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-pork">
+                            <label class="form-check-label" for="has-pork">
+                                Pork
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-poultry">
+                            <label class="form-check-label" for="has-poultry">
+                                Poultry
+                            </label>
+                        </div>
+                    </div>
+                    <div id="which-one">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-seafood">
+                            <label class="form-check-label" for="has-seafood">
+                                Seafood
+                            </label>
+                        </div>
+                        <p >Which one?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-fish-fin">
+                            <label class="form-check-label" for="has-fish-fin">
+                                Fish (with fins)
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-shellfish">
+                            <label class="form-check-label" for="has-shellfish">
+                                Shellfish
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="true" id="has-dairy">
+                        <label class="form-check-label" for="has-dairy">
+                            Dairy
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="true" id="has-eggs">
+                        <label class="form-check-label" for="has-eggs">
+                            Eggs
+                        </label>
+                    </div>
+                    <div id="which-one">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-nuts">
+                            <label class="form-check-label" for="has-nuts">
+                                Nuts
+                            </label>
+                        </div>
+                        <p >Which one?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-treenuts">
+                            <label class="form-check-label" for="has-treenuts">
+                                Tree nuts
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" value="true" id="has-peanuts">
+                            <label class="form-check-label" for="has-peanuts">
+                                Peanuts
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="true" id="has-gluten">
+                        <label class="form-check-label" for="has-gluten">
+                            Wheat Gluten
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="true" id="has-soy">
+                        <label class="form-check-label" for="has-soy">
+                            Soy
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" value="true" id="has-honey">
+                        <label class="form-check-label" for="has-honey">
+                            Honey
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-start">
+            <div class="mb-3">
+                <h5>Ingredients:</h6>
+                <p>Keep the following in mind:</p>
+                <table class="d-flex">
+                    <td class="p-2">
+                        <p>C = cup</p>
+                    </td>
+                    <td class="p-2">
+                        <p>T = tablepoon</p>
+                    </td>
+                    <td class="p-2">
+                        <p>t = teaspoon</p>
+                    </td>
+                </table>
+                <label for="ingredients" class="form-label">Ingredients</label>
+                <input type="text" class="form-control" name="ingredients" placeholder="2 C of...">
+            </div>
+        </div>
+        <div class="row align-items-start">
+                <div class="mb-3">
+                    <h5>Instructions:</h5>
+                    <p>Enter the steps to make it, one at a time.</p>
+                    <label for="instruction" class="form-label">Instruction Step</label>
+                    <input type="text" class="form-control" name="instruction" placeholder="First you..." data-index-number="1">
+                </div>
+        </div>
+    </form>
+</main>

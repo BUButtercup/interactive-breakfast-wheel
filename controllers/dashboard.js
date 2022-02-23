@@ -9,20 +9,32 @@ router.get('/', async (req, res) => {
         userId: req.session.userId,
       },
     });
+    if(recipeData){
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+   
     res.render('user-home', {
+        allRecipes: recipes,
         layout: 'dashboard',
       });
+    } else {
+      res.render('user-home', {
+        layout: 'dashboard',
+      });
+    }
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+
 
 router.get('/new', withAuth, (req, res) => {
   res.render('add-recipe', {
     layout: 'dashboard',
   });
 });
+
+
 
 router.get('/edit/:id', withAuth, async (req, res) => {
   try {
