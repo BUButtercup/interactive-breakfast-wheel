@@ -4,6 +4,15 @@
     padding: 0
 }
 
+@font-face {
+    font-family: 'Redacted Script';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/redactedscript/v3/ypvBbXGRglhokR7dcC3d1-R6zmxitm7ws5o7_w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
 body {
     display: flex;
     flex-direction: column;
@@ -11,28 +20,41 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.main-head {
+header {
+    position: sticky;
+    top: 0;
+    
+}
+
+.main-head, .dash-head {
     width: 100vw;
     height: 10vh;
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center; */
+    align-items: center;
     text-align: center;
     /* font-size: 2.5rem; */
     background-color: darkturquoise;
     color: whitesmoke;
     text-shadow: 2px 2px gray;
+    /* border-left: 1px dashed lightgray */
+}
+
+.dash-sub {
+    color: whitesmoke;
+    text-shadow: 2px 2px gray;
+    font-weight: bold;
 }
 
 main {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
 
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 form {
@@ -41,13 +63,18 @@ form {
     /* align-items: center; */
     justify-content: center;
     width: 70%;
-    margin-top: 10vh;
+    margin-top: 5vh;
     padding: 20px;
     border: 5px double gray;
 }
 
 form h2 {
     align-self: center;
+}
+
+.place-holder {
+    font-family: 'Redacted Script';
+    background-color: none;
 }
 
 .form-labels {
@@ -75,6 +102,11 @@ form h2 {
     align-self: center;
 }
 
+.direction{
+    /* width: auto; */
+    font-size: 0.75rem;
+}
+
 .drop-nav {
     width: 30%;
     text-shadow: none;
@@ -96,7 +128,7 @@ form h2 {
     z-index: 3;
 }
 
-#home-btn {
+.home-btn {
     color: whitesmoke;
     font-size: 2rem;
     font-weight: bold;
@@ -121,7 +153,7 @@ form h2 {
     padding: 0 20%;
 }
 
-#title {
+.title {
     font-size: 2.5rem;
     font-weight: bold;
     color: gray;
@@ -138,4 +170,12 @@ form h2 {
     color:#6c757d; 
     text-decoration: underline; 
     cursor: pointer;
+}
+
+#recipe-preview {
+    margin-top: 5vh;
+}
+
+#new-author, #new-servings, #new-allergen, #new-ingredients, #new-instructions {
+    display: none;
 }
