@@ -2,13 +2,20 @@ const router = require('express').Router();
 const { Recipe, Comment, User } = require('../models/');
 
 router.get('/', async (req, res) => {
-  try {
+  try { 
+    if (!req.session.userId) {
     // const recipeData = await Recipe.findAll({
     //   include: [User],
     // });
 
     // const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-    res.render('landing');
+      res.render('landing');
+    } else {
+      res.render('landing', {
+        // allRecipes: recipes,
+        layout: 'dashboard',
+      });
+    }
   } catch (err) {
   res.status(500).json(err);
   }

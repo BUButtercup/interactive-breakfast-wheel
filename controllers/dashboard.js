@@ -9,18 +9,18 @@ router.get('/', async (req, res) => {
         userId: req.session.userId,
       },
     });
-    if(recipeData){
+    // if(recipeData){
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-   
+    console.log('recipes',recipes)
     res.render('user-home', {
         allRecipes: recipes,
         layout: 'dashboard',
       });
-    } else {
-      res.render('user-home', {
-        layout: 'dashboard',
-      });
-    }
+    // } else {
+    //   res.render('user-home', {
+    //     layout: 'dashboard',
+    //   });
+    // }
   } catch (err) {
     res.status(500).json(err);
   }

@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
       req.session.username = newUser.username;
       req.session.loggedIn = true;
 
-      res.json(newUser);
+      res.json({message:`New user created! ${newUser}`});
     });
   } catch (err) {
     res.status(500).json(err);
@@ -29,14 +29,14 @@ router.post('/login', async (req, res) => {
     });
 
     if (!user) {
-      res.status(400).json({ message: 'No user account found!' });
+      res.status(400).json({ message: 'check your username or password!' });
       return;
     }
 
     const validPassword = user.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: 'No user account found!' });
+      res.status(400).json({ message: 'check your username or password!' });
       return;
     }
 
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
       res.json({ user, message: 'You are now logged in!' });
     });
   } catch (err) {
-    res.status(400).json({ message: 'No user account found!' });
+    res.status(500).json({ message: `there was a problem: ${err}` });
   }
 });
 

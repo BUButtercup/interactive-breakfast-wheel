@@ -23,6 +23,7 @@ body {
 header {
     position: sticky;
     top: 0;
+   
     
 }
 
@@ -37,6 +38,7 @@ header {
     background-color: darkturquoise;
     color: whitesmoke;
     text-shadow: 2px 2px gray;
+  
     /* border-left: 1px dashed lightgray */
 }
 
@@ -63,7 +65,7 @@ form {
     /* align-items: center; */
     justify-content: center;
     width: 70%;
-    margin-top: 5vh;
+    margin-top: 2vh;
     padding: 20px;
     border: 5px double gray;
 }
@@ -103,7 +105,7 @@ form h2 {
 }
 
 .direction{
-    /* width: auto; */
+    width: auto;
     font-size: 0.75rem;
 }
 
@@ -134,13 +136,20 @@ form h2 {
     font-weight: bold;
     position: absolute;
     z-index:5;
-
-  
-
 }
 /* #home-btn h1 {
   
 } */
+
+.hidden-edit {
+    display:none;
+    /* display: flex; */
+    /* align-items:center; */
+}
+
+.hidden-value {
+    display: none;
+}
 
 #results {
 
@@ -172,8 +181,13 @@ form h2 {
     cursor: pointer;
 }
 
-#recipe-preview {
-    margin-top: 5vh;
+#recipe-preview{
+    margin-top: 2vh;
+}
+#save-btn-box {
+    /* position:sticky;
+    top: 20vh; */
+    margin-top: 30vh;
 }
 
 #new-author, #new-servings, #new-allergen, #new-ingredients, #new-instructions {
